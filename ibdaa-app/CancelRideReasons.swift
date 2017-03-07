@@ -1,5 +1,5 @@
 //
-//  GetTheClosetDriverViewController.swift
+//  CancelRideReasons.swift
 //  ibdaa-app
 //
 //  Created by Killvak on 07/03/2017.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class GetTheClosetDriverViewController: UIViewController {
-    @IBOutlet weak var cancelRideView: UIView!
+class CancelRideReasons: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,22 +21,10 @@ class GetTheClosetDriverViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func tabBarButtons(_ sender: UIButton) {
-        switch sender.tag {
-        case 0 : print(0)
-        case 1 : print(1)
-        case 2 : print  (2)
-        default : print("default value for switch ")
-        }
-    }
 
-    @IBAction func cancelRide(_ sender: UIButton) {
-        UIView.animate(withDuration: 0.5) {
-            self.cancelRideView.alpha = 1
-        }
+    @IBAction func reasonToCancelRide(_ sender: UIButton) {
+        print("that is the sender Tag : \(sender.tag)")
     }
-    
-    
     /*
     // MARK: - Navigation
 
