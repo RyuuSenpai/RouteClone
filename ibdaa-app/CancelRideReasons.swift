@@ -10,10 +10,13 @@ import UIKit
 
 class CancelRideReasons: UIViewController {
 
+    @IBOutlet var checkBoxBtnsOL: [UIButton]!
+    var reasonForCancelation : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +27,20 @@ class CancelRideReasons: UIViewController {
 
     @IBAction func reasonToCancelRide(_ sender: UIButton) {
         print("that is the sender Tag : \(sender.tag)")
+     
+        for x in checkBoxBtnsOL {
+            x.setImage(UIImage(named:"unChecked"), for: UIControlState.normal)
+            x.isSelected = false
+        }
+   
+        sender.isSelected = !sender.isSelected
+         
+        if sender.isSelected {
+            sender.setImage(UIImage(named:"checked"), for: UIControlState.normal)
+            self.reasonForCancelation = sender.tag
+        }
     }
+    
     /*
     // MARK: - Navigation
 
