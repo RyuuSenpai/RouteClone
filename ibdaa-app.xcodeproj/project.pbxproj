@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		527219881E6EE20A00540B51 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527219871E6EE20A00540B51 /* SWRevealViewController.m */; };
 		7108283B1E5EE41A001F3F16 /* ExteUiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7108283A1E5EE41A001F3F16 /* ExteUiLabel.swift */; };
 		7108283D1E5F1620001F3F16 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7108283C1E5F1620001F3F16 /* SignupVC.swift */; };
 		71085B661E5D006800DF3F51 /* arabFontnamed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71085B641E5D006800DF3F51 /* arabFontnamed.ttf */; };
@@ -47,6 +48,9 @@
 /* Begin PBXFileReference section */
 		0495B69A2A192371322B1A3A /* Pods-ibdaa-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ibdaa-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ibdaa-app/Pods-ibdaa-app.debug.xcconfig"; sourceTree = "<group>"; };
 		21E31FE749B7C49137D7FC4A /* Pods_ibdaa_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ibdaa_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		527219851E6EE20900540B51 /* ibdaa-app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ibdaa-app-Bridging-Header.h"; sourceTree = "<group>"; };
+		527219861E6EE20A00540B51 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		527219871E6EE20A00540B51 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		7108283A1E5EE41A001F3F16 /* ExteUiLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExteUiLabel.swift; sourceTree = "<group>"; };
 		7108283C1E5F1620001F3F16 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		71085B641E5D006800DF3F51 /* arabFontnamed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arabFontnamed.ttf; sourceTree = "<group>"; };
@@ -167,11 +171,14 @@
 		713DF3601E5DDEA60052E918 /* 3rd Pt Lib */ = {
 			isa = PBXGroup;
 			children = (
+				527219861E6EE20A00540B51 /* SWRevealViewController.h */,
+				527219871E6EE20A00540B51 /* SWRevealViewController.m */,
 				711E12541E5CDAD300FA2E7B /* Localization */,
 				71141C3E1E5CF5EF00EA9D44 /* MaterialView.swift */,
 				7108283A1E5EE41A001F3F16 /* ExteUiLabel.swift */,
 				713DF35C1E5DDE9F0052E918 /* FloatLabelTextField.swift */,
 				713DF35D1E5DDE9F0052E918 /* FloatLabelTextView.swift */,
+				527219851E6EE20900540B51 /* ibdaa-app-Bridging-Header.h */,
 			);
 			name = "3rd Pt Lib";
 			sourceTree = "<group>";
@@ -259,6 +266,7 @@
 					71C8354F1E5A35DC00FF9A53 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = YKSLKY2D83;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -376,6 +384,7 @@
 				7129BFD21E62D2D800643173 /* Constants.swift in Sources */,
 				7108283B1E5EE41A001F3F16 /* ExteUiLabel.swift in Sources */,
 				71C835561E5A35DC00FF9A53 /* ViewController.swift in Sources */,
+				527219881E6EE20A00540B51 /* SWRevealViewController.m in Sources */,
 				713DF35E1E5DDE9F0052E918 /* FloatLabelTextField.swift in Sources */,
 				711E125B1E5CDD4100FA2E7B /* MirroringLabel.swift in Sources */,
 				71C835541E5A35DC00FF9A53 /* AppDelegate.swift in Sources */,
@@ -525,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0495B69A2A192371322B1A3A /* Pods-ibdaa-app.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "ibdaa-app/ibdaa-app.entitlements";
 				DEVELOPMENT_TEAM = YKSLKY2D83;
 				INFOPLIST_FILE = "ibdaa-app/Info.plist";
@@ -532,6 +542,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeowls.ibdaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ibdaa-app/ibdaa-app-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -540,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A7FCC3A5CCFCD0778EEA4E6 /* Pods-ibdaa-app.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "ibdaa-app/ibdaa-app.entitlements";
 				DEVELOPMENT_TEAM = YKSLKY2D83;
 				INFOPLIST_FILE = "ibdaa-app/Info.plist";
@@ -547,6 +560,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zeowls.ibdaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ibdaa-app/ibdaa-app-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

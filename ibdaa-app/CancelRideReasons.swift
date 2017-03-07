@@ -34,7 +34,7 @@ class CancelRideReasons: UIViewController {
         }
    
         sender.isSelected = !sender.isSelected
-         
+        
         if sender.isSelected {
             sender.setImage(UIImage(named:"checked"), for: UIControlState.normal)
             self.reasonForCancelation = sender.tag
