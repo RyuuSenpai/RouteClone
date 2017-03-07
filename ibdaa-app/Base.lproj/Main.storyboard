@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aeP-O9-z1k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aeP-O9-z1k">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -155,14 +155,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beQ-lc-ZfH">
-                                        <rect key="frame" x="40.5" y="30" width="30" height="30"/>
+                                        <rect key="frame" x="40" y="30" width="30" height="30"/>
                                         <state key="normal" title="eng"/>
                                         <connections>
                                             <action selector="zZZ:" destination="I3n-3z-OhC" eventType="touchUpInside" id="Tfi-zh-oh8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yB-1X-lPm">
-                                        <rect key="frame" x="40.5" y="60" width="30" height="30"/>
+                                        <rect key="frame" x="40" y="60" width="30" height="30"/>
                                         <state key="normal" title="Fr"/>
                                         <connections>
                                             <action selector="zZZ:" destination="I3n-3z-OhC" eventType="touchUpInside" id="z2V-18-Uwp"/>
@@ -564,10 +564,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-I3-cTu">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="645.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="646"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xrc-fO-VjN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="173.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXA-2l-IdC">
                                                                 <rect key="frame" x="38.5" y="22" width="243" height="44"/>
@@ -588,7 +588,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9U-Qy-R6N">
-                                                                <rect key="frame" x="38.5" y="74" width="243" height="44.5"/>
+                                                                <rect key="frame" x="38.5" y="74" width="243" height="45"/>
                                                                 <color key="backgroundColor" red="0.12941176469999999" green="0.58823529409999997" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="Twitter Signin"/>
                                                                 <connections>
@@ -617,7 +617,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LM2-Kg-tCA">
-                                                        <rect key="frame" x="10" y="128.5" width="310" height="45"/>
+                                                        <rect key="frame" x="10" y="129" width="310" height="45"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twd-r0-IYl">
                                                                 <rect key="frame" x="13" y="8" width="30" height="30"/>
@@ -651,7 +651,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzy-uj-v3p">
-                                                        <rect key="frame" x="0.0" y="173.5" width="320" height="472"/>
+                                                        <rect key="frame" x="0.0" y="174" width="320" height="472"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uDy-oL-MKV">
                                                                 <rect key="frame" x="46" y="15" width="227" height="1"/>
@@ -1915,6 +1915,10 @@
         <scene sceneID="m4q-Nc-qo1">
             <objects>
                 <viewController id="AH9-8v-PnK" customClass="CancelRideReasons" customModule="ibdaa_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bsr-d0-KS3"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Vk-Qv-c5E"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YiI-Qp-1kU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1938,13 +1942,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lbz-6A-E1t">
-                                <rect key="frame" x="22" y="98" width="276" height="331"/>
+                                <rect key="frame" x="22" y="98" width="276" height="335.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gvr-zq-aJH">
-                                        <rect key="frame" x="0.0" y="0.0" width="276" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="276" height="33"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huy-2h-FIB">
-                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Huy-2h-FIB" secondAttribute="height" multiplier="1:1" id="lM5-yd-wZD"/>
                                                 </constraints>
@@ -1954,7 +1958,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride CancellationRide Cancellation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="e5U-a9-X04">
-                                                <rect key="frame" x="42.5" y="0.0" width="233.5" height="32.5"/>
+                                                <rect key="frame" x="43" y="0.0" width="233" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1962,17 +1966,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0DD-ho-nh1">
-                                        <rect key="frame" x="0.0" y="37.5" width="276" height="32"/>
+                                        <rect key="frame" x="0.0" y="38" width="276" height="32.5"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dt1-zs-FU6">
-                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="32.5"/>
                                                 <state key="normal" image="unChecked"/>
                                                 <connections>
                                                     <action selector="reasonToCancelRide:" destination="AH9-8v-PnK" eventType="touchUpInside" id="8bR-7O-Pda"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride CancellationRide Cancellation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="8dh-PP-ws7">
-                                                <rect key="frame" x="42.5" y="0.0" width="233.5" height="32"/>
+                                                <rect key="frame" x="43" y="0.0" width="233" height="32.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1980,17 +1984,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AfX-0w-GgV">
-                                        <rect key="frame" x="0.0" y="74.5" width="183" height="33"/>
+                                        <rect key="frame" x="0.0" y="75.5" width="183.5" height="33.5"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrn-FV-cfG">
-                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="33"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="33.5"/>
                                                 <state key="normal" image="unChecked"/>
                                                 <connections>
                                                     <action selector="reasonToCancelRide:" destination="AH9-8v-PnK" eventType="touchUpInside" id="ZtA-hJ-haa"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride Cancellation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="R2f-KO-6Ms">
-                                                <rect key="frame" x="42.5" y="0.0" width="140.5" height="33"/>
+                                                <rect key="frame" x="43" y="0.0" width="140.5" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -1998,17 +2002,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5k9-3M-8RD">
-                                        <rect key="frame" x="0.0" y="112.5" width="276" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="114" width="276" height="33"/>
                                         <subviews>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azV-NM-vHq">
-                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
                                                 <state key="normal" image="unChecked"/>
                                                 <connections>
                                                     <action selector="reasonToCancelRide:" destination="AH9-8v-PnK" eventType="touchUpInside" id="Lhc-cT-Wex"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride CancellationRide Cancellation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="ofl-Po-28x">
-                                                <rect key="frame" x="42.5" y="0.0" width="233.5" height="32.5"/>
+                                                <rect key="frame" x="43" y="0.0" width="233" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -2016,17 +2020,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6yn-a0-tgm">
-                                        <rect key="frame" x="0.0" y="150" width="183" height="32"/>
+                                        <rect key="frame" x="0.0" y="152" width="183.5" height="32.5"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHy-Ta-t1A">
-                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="32.5"/>
                                                 <state key="normal" image="unChecked"/>
                                                 <connections>
                                                     <action selector="reasonToCancelRide:" destination="AH9-8v-PnK" eventType="touchUpInside" id="Ujt-VS-KhX"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride Cancellation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="wX3-Hg-1GH">
-                                                <rect key="frame" x="42.5" y="0.0" width="140.5" height="32"/>
+                                                <rect key="frame" x="43" y="0.0" width="140.5" height="32.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -2034,17 +2038,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-2W-J0p">
-                                        <rect key="frame" x="0.0" y="187" width="276" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="189.5" width="276" height="33"/>
                                         <subviews>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeR-Ld-wi5">
-                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="33"/>
                                                 <state key="normal" image="unChecked"/>
                                                 <connections>
                                                     <action selector="reasonToCancelRide:" destination="AH9-8v-PnK" eventType="touchUpInside" id="exB-Ar-9u6"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride CancellationRide Cancellation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="v6A-V4-6kV">
-                                                <rect key="frame" x="42" y="0.0" width="234" height="32.5"/>
+                                                <rect key="frame" x="42.5" y="0.0" width="233.5" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -2052,17 +2056,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vPd-md-tqq">
-                                        <rect key="frame" x="0.0" y="224.5" width="182.5" height="32"/>
+                                        <rect key="frame" x="0.0" y="227.5" width="183" height="32.5"/>
                                         <subviews>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsG-bH-h8q">
-                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32.5"/>
                                                 <state key="normal" image="unChecked"/>
                                                 <connections>
                                                     <action selector="reasonToCancelRide:" destination="AH9-8v-PnK" eventType="touchUpInside" id="DXj-sO-3ex"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride Cancellation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="jml-5r-RRy">
-                                                <rect key="frame" x="42" y="0.0" width="140.5" height="32"/>
+                                                <rect key="frame" x="42.5" y="0.0" width="140.5" height="32.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -2070,17 +2074,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l2h-xn-zfY">
-                                        <rect key="frame" x="0.0" y="261.5" width="276" height="32.5"/>
+                                        <rect key="frame" x="0.0" y="265" width="276" height="33"/>
                                         <subviews>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBB-lJ-Zmm">
-                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="33"/>
                                                 <state key="normal" image="unChecked"/>
                                                 <connections>
                                                     <action selector="reasonToCancelRide:" destination="AH9-8v-PnK" eventType="touchUpInside" id="eaS-qO-1LW"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride CancellationRide Cancellation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="UGs-F1-o08">
-                                                <rect key="frame" x="42.5" y="0.0" width="233.5" height="32.5"/>
+                                                <rect key="frame" x="43" y="0.0" width="233" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -2088,17 +2092,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-ZL-OQ9">
-                                        <rect key="frame" x="0.0" y="299" width="182.5" height="32"/>
+                                        <rect key="frame" x="0.0" y="303" width="183" height="32.5"/>
                                         <subviews>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6n-SL-b0g">
-                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32.5"/>
                                                 <state key="normal" image="unChecked"/>
                                                 <connections>
                                                     <action selector="reasonToCancelRide:" destination="AH9-8v-PnK" eventType="touchUpInside" id="zoj-BK-Ypj"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ride Cancellation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Esg-Mm-bKS">
-                                                <rect key="frame" x="42" y="0.0" width="140.5" height="32"/>
+                                                <rect key="frame" x="42.5" y="0.0" width="140.5" height="32.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -2126,10 +2130,10 @@
                                 </constraints>
                             </stackView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXL-dS-Toe" customClass="RoundRectView" customModule="ibdaa_app" customModuleProvider="target">
-                                <rect key="frame" x="32" y="449" width="256" height="45"/>
+                                <rect key="frame" x="32" y="453.5" width="256" height="40.5"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVB-zR-9Pl">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="40.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <state key="normal" title="Send">
@@ -2168,7 +2172,7 @@
                             <constraint firstItem="lbz-6A-E1t" firstAttribute="leading" secondItem="YiI-Qp-1kU" secondAttribute="leadingMargin" constant="6" id="Ljn-VK-HTB"/>
                             <constraint firstItem="zXL-dS-Toe" firstAttribute="width" secondItem="YiI-Qp-1kU" secondAttribute="width" multiplier="0.8" id="Llx-mM-LFD"/>
                             <constraint firstItem="fjV-gR-G8G" firstAttribute="top" secondItem="YiI-Qp-1kU" secondAttribute="top" constant="20" id="cwM-vi-S5Y"/>
-                            <constraint firstItem="zXL-dS-Toe" firstAttribute="height" secondItem="YiI-Qp-1kU" secondAttribute="height" multiplier="0.09" id="iEc-Ku-lBN"/>
+                            <constraint firstItem="zXL-dS-Toe" firstAttribute="height" secondItem="YiI-Qp-1kU" secondAttribute="height" multiplier="0.08" id="iEc-Ku-lBN"/>
                             <constraint firstItem="nJp-Ja-Umj" firstAttribute="leading" secondItem="YiI-Qp-1kU" secondAttribute="leadingMargin" id="kba-Vz-L8M"/>
                             <constraint firstItem="zXL-dS-Toe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lbz-6A-E1t" secondAttribute="bottom" constant="20" id="qkD-ng-nWF"/>
                             <constraint firstAttribute="trailing" secondItem="fjV-gR-G8G" secondAttribute="trailing" constant="15" id="qyF-Kp-shU"/>
