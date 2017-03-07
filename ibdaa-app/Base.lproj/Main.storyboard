@@ -155,14 +155,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beQ-lc-ZfH">
-                                        <rect key="frame" x="40" y="30" width="30" height="30"/>
+                                        <rect key="frame" x="40.5" y="30" width="30" height="30"/>
                                         <state key="normal" title="eng"/>
                                         <connections>
                                             <action selector="zZZ:" destination="I3n-3z-OhC" eventType="touchUpInside" id="Tfi-zh-oh8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yB-1X-lPm">
-                                        <rect key="frame" x="40" y="60" width="30" height="30"/>
+                                        <rect key="frame" x="40.5" y="60" width="30" height="30"/>
                                         <state key="normal" title="Fr"/>
                                         <connections>
                                             <action selector="zZZ:" destination="I3n-3z-OhC" eventType="touchUpInside" id="z2V-18-Uwp"/>
@@ -284,7 +284,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KOd-Wg-AMk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lYs-h0-2VE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lYs-h0-2VE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -302,7 +302,7 @@
             <objects>
                 <navigationController storyboardIdentifier="rootnav" automaticallyAdjustsScrollViewInsets="NO" id="S9q-FA-yj3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BgE-aP-DoD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="BgE-aP-DoD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
