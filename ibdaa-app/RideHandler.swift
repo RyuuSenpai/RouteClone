@@ -25,7 +25,7 @@ class RideHandler: NSObject {
     }
     
     func requestRide(lat : Double , lang : Double) {
-        let data : Dictionary<String , Any> = [ Constants.NAME   : rider, Constants.LATITUDER : lat , Constants.LONGTITUDE : lang]
+        let data : Dictionary<String , Any> = [ Constants.NAME   : rider, Constants.LATITUDER : lat , Constants.LONGITUDE : lang]
         
         DBProvider.Instance.requestsFirebaseRef.child("101").setValue(data)
     }
@@ -38,7 +38,7 @@ class RideHandler: NSObject {
         DBProvider.Instance.requestsFirebaseRef.observe(.childAdded, with: { (snapshot) in
             
             if let data = snapshot.value as? NSDictionary {
-                if let lat = data[Constants.LATITUDER] as? Double ,let long = data[Constants.LONGTITUDE] as? Double {
+                if let lat = data[Constants.LATITUDER] as? Double ,let long = data[Constants.LONGITUDE] as? Double {
                     
                     self.delegate?.acceptRide(lat: lat, long: long)
                 }

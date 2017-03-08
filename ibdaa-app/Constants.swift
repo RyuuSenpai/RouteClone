@@ -22,7 +22,7 @@ class Constants {
     static let Rider_Accepted = "Rider_Accept"
     static let NAME = "name"
     static let LATITUDER = "latitude"
-    static let LONGTITUDE = "longtitude"
+    static let LONGITUDE = "longitude"
 
     
     

@@ -14,6 +14,7 @@
 		529DF9881E702370009BF3FB /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9811E702370009BF3FB /* GFGeoHash.m */; };
 		529DF9891E702370009BF3FB /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9831E702370009BF3FB /* GFGeoHashQuery.m */; };
 		529DF98A1E702370009BF3FB /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9851E702370009BF3FB /* GFQuery.m */; };
+		529DF98E1E703418009BF3FB /* AnnotationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DF98D1E703418009BF3FB /* AnnotationsClass.swift */; };
 		7108283B1E5EE41A001F3F16 /* ExteUiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7108283A1E5EE41A001F3F16 /* ExteUiLabel.swift */; };
 		7108283D1E5F1620001F3F16 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7108283C1E5F1620001F3F16 /* SignupVC.swift */; };
 		71085B661E5D006800DF3F51 /* arabFontnamed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71085B641E5D006800DF3F51 /* arabFontnamed.ttf */; };
@@ -73,6 +74,7 @@
 		529DF9831E702370009BF3FB /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
 		529DF9841E702370009BF3FB /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
 		529DF9851E702370009BF3FB /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
+		529DF98D1E703418009BF3FB /* AnnotationsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationsClass.swift; sourceTree = "<group>"; };
 		7108283A1E5EE41A001F3F16 /* ExteUiLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExteUiLabel.swift; sourceTree = "<group>"; };
 		7108283C1E5F1620001F3F16 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		71085B641E5D006800DF3F51 /* arabFontnamed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arabFontnamed.ttf; sourceTree = "<group>"; };
@@ -200,10 +202,12 @@
 		7129BFD31E62D4D300643173 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				529DF98D1E703418009BF3FB /* AnnotationsClass.swift */,
 				7129BFD11E62D2D800643173 /* Constants.swift */,
 				71FACFDE1E63603100C8679C /* DBProvider.swift */,
 				71FACFE01E6369B200C8679C /* Protocols.swift */,
 				712220781E6D6BE000A0C784 /* GetLocationTitle.swift */,
+				529DF9721E700E7D009BF3FB /* GeoModel.swift */,
 			);
 			name = M;
 			sourceTree = "<group>";
@@ -274,7 +278,6 @@
 				7129BFCF1E62D06A00643173 /* RideHandler.swift */,
 				7150AC701E6C1C5900FB1445 /* GoogleMapsVC.swift */,
 				71C835571E5A35DC00FF9A53 /* Main.storyboard */,
-				529DF9721E700E7D009BF3FB /* GeoModel.swift */,
 				7122207A1E6EA5E700A0C784 /* GetTheClosetDriverViewController.swift */,
 				7122207C1E6EB10600A0C784 /* CancelRideReasons.swift */,
 				717495411E60C3030097983B /* ChatVC.swift */,
@@ -462,6 +465,7 @@
 				713DF35F1E5DDE9F0052E918 /* FloatLabelTextView.swift in Sources */,
 				7122207B1E6EA5E700A0C784 /* GetTheClosetDriverViewController.swift in Sources */,
 				7122207D1E6EB10600A0C784 /* CancelRideReasons.swift in Sources */,
+				529DF98E1E703418009BF3FB /* AnnotationsClass.swift in Sources */,
 				529DF98A1E702370009BF3FB /* GFQuery.m in Sources */,
 				71FACFDF1E63603100C8679C /* DBProvider.swift in Sources */,
 				71C835661E5A36B700FF9A53 /* LaunchScreenVC.swift in Sources */,

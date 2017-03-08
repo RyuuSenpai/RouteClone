@@ -16,7 +16,7 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var pinImageView: UIImageView!
     
-    
+    var currentAnnotations = [AnnotationsClass]()
     var serverData = [GeoModel]()
     let locationManager = CLLocationManager()
     private var userLocation : CLLocationCoordinate2D?
@@ -24,7 +24,7 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
     var mapViewIsZoomedINOnce = true
     var ref : FIRDatabaseReference?
     var dataObserver : FIRDatabaseHandle?
-    
+//    var geoFire : GeoFire!
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
@@ -38,20 +38,115 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
         // Do any additional setup after loading the view.
         
         ref = FIRDatabase.database().reference()
-        dataObserver = ref?.child("Requests").observe(.childAdded, with: { (snapshot) in
+//         geoFire = GeoFire(firebaseRef: ref)
+         dataObserver = ref?.child("Requests").observe(.value, with: { (snapshot) in
             
-            let dataSnap = snapshot.value as? [String:AnyObject]
+            guard  snapshot.value != nil  else {
+                return
+            }
             
-            guard let data = dataSnap else { return }
+            for child in snapshot.children {
+//                print("That i the child \(child)")
+                let snap = child as! FIRDataSnapshot //each child is a snapshot
+                let dataSnap = snap.value as? [String:AnyObject]
+//                print("That i the child 2  \(dataSnap)")
+
+                print("that is the name \(dataSnap?["name"] as! String)")
+            }
+//            for child in  snapshot.children {
+//                 let snap = child as! FIRDataSnapshot //each child is a snapshot
+//                let dataSnap = snap.value as? [String:AnyObject]
+//                
+//                guard let data = dataSnap , let location = self.userLocation else { return }
+//                guard let name = data["name"] as? String ,  let lat = data["latitude"] as? Double , let long = data["longitude"] as? Double else { return }
+//                
+//                let geoData = GeoModel(name: name , lat: lat , long: long)
+//                print("That is the name [\(geoData.name)]")
+//                
+//                let coordinate1 = CLLocation(latitude: location.latitude, longitude: location.longitude)
+//                let coordinate2 = CLLocation(latitude: lat, longitude: long)
+//                //Decalare distanceInMeters as global variables so that you can show distance on subtitles
+//                let distanceInMeters = coordinate1.distance(from: coordinate2)
+//                guard distanceInMeters <= 5000 && geoData.name != "102" else { print("1022421412321");return }
+//                print("That is the name [\(geoData.name)]")
+//                
+//                print("that is the data in the server : \(geoData.name) and that is the distnace between :  \(distanceInMeters  )")
+//                let x = AnnotationsClass( coord: CLLocationCoordinate2D(latitude: lat, longitude: long))
+//                self.mapView.addAnnotation(x)
+//                self.serverData.append(geoData)
+//  
+//            }
             
-           let geoData = GeoModel(name: data["name"] as! String, lat: data["latitude"] as! Double, long: data["longitude"] as! Double)
             
-            self.serverData.append(geoData)
-                print("that is the data in the server : \(geoData.name)")
-  
-        })
+//            let x = snapshot.value as? Dictionary<String,AnyObject>
+//   
+////            print("that is aswesome : \(x)")
+//            
+//            guard let data = x , let location = self.userLocation else {
+//                return
+//            }
+////            guard let name = data["name"] as? String ,  let lat = data["latitude"] as? Double , let long = data["longitude"] as? Double else {
+////            
+////                return
+////            }
+//            
+//            for ( key , data ) in data {
+//                print("that is the key : \(key) and that is the value : \(data)")
+//                guard let name = data["name"] as? String ,  let lat = data["latitude"] as? Double , let long = data["longitude"] as? Double else {
+//                    return
+//                }
+//
+//                let geoData = GeoModel(name: name , lat: lat , long: long)
+//                print("That is the name [\(geoData.name)]")
+//                
+//                let coordinate1 = CLLocation(latitude: location.latitude, longitude: location.longitude)
+//                let coordinate2 = CLLocation(latitude: lat, longitude: long)
+//                //Decalare distanceInMeters as global variables so that you can show distance on subtitles
+//                let distanceInMeters = coordinate1.distance(from: coordinate2)
+//                guard distanceInMeters <= 5000 && geoData.name != "102" else { print("1022421412321");return }
+//                print("That is the name [\(geoData.name)]")
+//                
+//                print("that is the data in the server : \(geoData.name) and that is the distnace between :  \(distanceInMeters  )")
+//                let x = AnnotationsClass( coord: CLLocationCoordinate2D(latitude: lat, longitude: long))
+//                self.mapView.addAnnotation(x)
+//                self.serverData.append(geoData)
+//                self.currentAnnotations.append(x)
+//
+//            
+//            
+//            
+//            }
+////            print("that is aswesome2 : \(snapshot.value)")
+
+         })
         
+//        dataObserver = ref?.child("Requests").observe(.childChanged, with: { (snapshot) in
+//            
+//            let dataSnap = snapshot.value as? [String:AnyObject]
+//            
+//            guard let data = dataSnap , let location = self.userLocation else { return }
+//            guard let name = data["name"] as? String ,  let lat = data["latitude"] as? Double , let long = data["longitude"] as? Double else { return }
+//            
+//            let geoData = GeoModel(name: name , lat: lat , long: long)
+//            print("That is the name [\(geoData.name)]")
+//
+//            let coordinate1 = CLLocation(latitude: location.latitude, longitude: location.longitude)
+//            let coordinate2 = CLLocation(latitude: lat, longitude: long)
+//            //Decalare distanceInMeters as global variables so that you can show distance on subtitles
+//            let distanceInMeters = coordinate1.distance(from: coordinate2)
+//            guard distanceInMeters <= 5000 && geoData.name != "102" else { print("1022421412321");return }
+//            print("That is the name [\(geoData.name)]")
+//
+//            print("that is the data in the server : \(geoData.name) and that is the distnace between :  \(distanceInMeters  )")
+//            let x = AnnotationsClass( coord: CLLocationCoordinate2D(latitude: lat, longitude: long))
+//            self.mapView.addAnnotation(x)
+//            self.serverData.append(geoData)
+//
+//        })
     }
+
+    
+    
     /**
  before u add annoations u have to remove them 
      
@@ -66,23 +161,23 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
     
     
     private func riderRequest(title : String , sms : String , requestAlive: Bool) {
-        
-        let alert = UIAlertController(title: title, message: sms, preferredStyle: .alert)
-        
-        if requestAlive {
-            let accept = UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
-                
-                
-            })
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil   )
-            
-            alert.addAction(accept)
-            alert.addAction(cancel)
-        }else {
-            let ok = UIAlertAction(title: "Ok", style: .default, handler: nil   )
-        alert.addAction(ok)
-        }
-        present(alert, animated: true, completion: nil)
+//
+//        let alert = UIAlertController(title: title, message: sms, preferredStyle: .alert)
+//        
+//        if requestAlive {
+//            let accept = UIAlertAction(title: "Accept", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+//                
+//                
+//            })
+//            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil   )
+//            
+//            alert.addAction(accept)
+//            alert.addAction(cancel)
+//        }else {
+//            let ok = UIAlertAction(title: "Ok", style: .default, handler: nil   )
+//        alert.addAction(ok)
+//        }
+//        present(alert, animated: true, completion: nil)
     }
     
     
@@ -106,14 +201,35 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         if  mapViewIsZoomedIN {
-        print("Zoomed in regionDidChangeAnimated \(self.mapView.centerCoordinate) ")
+            let y = GeoModel(name: "102", lat: self.mapView.centerCoordinate.latitude, long: self.mapView.centerCoordinate.longitude)
+//        print("Zoomed in regionDidChangeAnimated \(self.mapView.centerCoordinate) ")
         self.mapViewIsZoomedIN = false
         delay(delay: 2.0){
             self.mapViewIsZoomedIN = true
             self.animateImage()
             return
             }
+          self.ref?.child("Requests").child("102").setValue(dict(data: y))
         }
+ 
+//        geoFire.setLocation(CLLocation(latitude: self.mapView.centerCoordinate.latitude, longitude: self.mapView.centerCoordinate.longitude), forKey: "firebase-hq") { (error) in
+//            if (error != nil) {
+//                print("An error occured: \(error)")
+//            } else {
+//                print("Saved location successfully!")
+//            }
+//        }
+    }
+    
+    func dict(data : GeoModel) -> Dictionary<String,AnyObject> {
+        
+        return [
+            Constants.NAME : data.name as AnyObject,
+            Constants.LATITUDER : data.latitude as AnyObject,
+            Constants.LONGITUDE : data.longtiude as AnyObject
+        ]
+        
+        
     }
     
     func animateImage() {

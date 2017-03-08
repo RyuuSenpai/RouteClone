@@ -11,9 +11,9 @@ import Foundation
 class GeoModel : NSObject {
     
     
-    var _name : String?
-    var _latitude : Double?
-    var _longitude : Double?
+   private  var _name : String?
+    private var _latitude : Double?
+    private var _longitude : Double?
     
     var name : String {
         guard let name  = _name else {
