@@ -9,18 +9,21 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseDatabase
+//import Firebase
 class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelegate , RidesController{
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var pinImageView: UIImageView!
     
     
-    
+    var serverData = [GeoModel]()
     let locationManager = CLLocationManager()
     private var userLocation : CLLocationCoordinate2D?
    var mapViewIsZoomedIN = true
-    
-    
+    var mapViewIsZoomedINOnce = true
+    var ref : FIRDatabaseReference?
+    var dataObserver : FIRDatabaseHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,21 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
         RideHandler.Instance.delegate = self
         RideHandler.Instance.observeMessagesForDriver()
         // Do any additional setup after loading the view.
+        
+        ref = FIRDatabase.database().reference()
+        dataObserver = ref?.child("Requests").observe(.childAdded, with: { (snapshot) in
+            
+            let dataSnap = snapshot.value as? [String:AnyObject]
+            
+            guard let data = dataSnap else { return }
+            
+           let geoData = GeoModel(name: data["name"] as! String, lat: data["latitude"] as! Double, long: data["longitude"] as! Double)
+            
+            self.serverData.append(geoData)
+                print("that is the data in the server : \(geoData.name)")
+  
+        })
+        
     }
     /**
  before u add annoations u have to remove them 
@@ -76,9 +94,13 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locationManager.location?.coordinate {
             userLocation = CLLocationCoordinate2DMake(location.latitude, location.longitude)
-//            let region = MKCoordinateRegionMake(userLocation!, MKCoordinateSpanMake(0.01, 0.01))
-//            
-//            mapView.setRegion(region, animated: true)
+            guard let userlocation = userLocation else { return }
+            if mapViewIsZoomedINOnce {
+            let region = MKCoordinateRegionMake(userlocation, MKCoordinateSpanMake(0.01, 0.01))
+            //
+            mapView.setRegion(region, animated: true)
+                self.mapViewIsZoomedINOnce = false
+            }
         }
     }
     
@@ -109,7 +131,7 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
     
     
     @IBAction func bookTripBtnAct(_ sender: UIButton) {
-        
+        print("that is the server data : 2 \(self.serverData)")
         if sender.tag == 0 {
             print("Book now")
         }else if sender.tag == 1{

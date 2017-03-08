@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="osi-5U-xMA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KOd-Wg-AMk">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -294,7 +294,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdN-6H-GD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="779"/>
+            <point key="canvasLocation" x="131" y="349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aLd-t5-v6c">
@@ -2316,6 +2316,6 @@
         <image name="uncheck" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P74-jR-Dxq"/>
+        <segue reference="e6w-R7-ElX"/>
     </inferredMetricsTieBreakers>
 </document>

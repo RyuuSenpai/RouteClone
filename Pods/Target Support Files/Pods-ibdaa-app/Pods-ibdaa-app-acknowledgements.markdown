@@ -103,27 +103,27 @@ Fabric: Copyright 2016 Twitter, Inc. All Rights Reserved. Use of this software i
 
 ## Firebase
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## FirebaseAnalytics
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## FirebaseAuth
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## FirebaseCore
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## FirebaseDatabase
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## FirebaseInstanceID
 
-Copyright 2016 Google
+Copyright 2017 Google
 
 ## GTMSessionFetcher
 
@@ -331,25 +331,13 @@ Copyright 2016 Google
    limitations under the License.
 
 
-## GoogleInterchangeUtilities
-
-Copyright 2016 Google
-
 ## GoogleMaps
-
-Copyright 2017 Google
-
-## GooglePlacePicker
 
 Copyright 2017 Google
 
 ## GooglePlaces
 
 Copyright 2017 Google
-
-## GoogleSymbolUtilities
-
-Copyright 2016 Google
 
 ## GoogleToolboxForMac
 
