@@ -12,9 +12,10 @@ import MapKit
 class AnnotationsClass : NSObject, MKAnnotation {
     
     var coordinate: CLLocationCoordinate2D
-    
-    init(coord : CLLocationCoordinate2D) {
+    var id : String!
+    init(coord : CLLocationCoordinate2D,id : String ) {
         self.coordinate = coord
+        self.id  = id 
     }
     
     
