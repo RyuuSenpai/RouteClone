@@ -25,6 +25,7 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
 
    var mapViewIsZoomedIN = true
     var mapViewIsZoomedINOnce = true
+    var isObserving = false
     var ref : FIRDatabaseReference?
     var dataObserver : FIRDatabaseHandle?
 //    var geoFire : GeoFire!
@@ -42,26 +43,45 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
         
         ref = FIRDatabase.database().reference()
 //         geoFire = GeoFire(firebaseRef: ref)
-         dataObserver = ref?.child("Requests").observe(.value, with: { (snapshot) in
+    
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.observer()
+    }
+    func observer() {
+        guard !isObserving else {
+            return
+        }
+        self.isObserving = true
+
+       _ =  ref?.child("Requests").observeSingleEvent(of: .value, with: { (snapshot) in
+
+
+        
+//        })
+//        dataObserver = ref?.child("Requests").observe(.value, with: { (snapshot) in
             
             guard  snapshot.value != nil  else {
                 return
             }
             
             for child in snapshot.children {
-//                print("That i the child \(child)")
+                //                print("That i the child \(child)")
                 let snap = child as! FIRDataSnapshot //each child is a snapshot
                 let dataSnap = snap.value as? [String:AnyObject]
-//                print("That i the child 2  \(dataSnap)")
-//                DispatchQueue.main.async {
-//                    self.removeAllAnnotations()
-//                }
-
-//                print("that is the name \(dataSnap?["name"] as! String)")
+                //                print("That i the child 2  \(dataSnap)")
+                //                DispatchQueue.main.async {
+                //                    self.removeAllAnnotations()
+                //                }
+                
+                //                print("that is the name \(dataSnap?["name"] as! String)")
                 guard let name = dataSnap?["name"] as? String ,  let lat = dataSnap?["latitude"] as? Double , let long = dataSnap?["longitude"] as? Double  , let location = self.userPickedLocation else {
                     return }
-//                print("that is my name : \(name) , and that is lat : \(lat) and that is long : \(long)")
-                                let geoData = GeoModel(name: name , lat: lat , long: long)
+                //                print("that is my name : \(name) , and that is lat : \(lat) and that is long : \(long)")
+                let geoData = GeoModel(name: name , lat: lat , long: long)
                 
                 let coordinate1 = CLLocation(latitude: location.latitude, longitude: location.longitude)
                 let coordinate2 = CLLocation(latitude: lat, longitude: long)
@@ -69,56 +89,21 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
                 let distanceInMeters = coordinate1.distance(from: coordinate2)
                 print("that city \(geoData.name) is the distance : \(distanceInMeters)")
                 if distanceInMeters <= 5000 && geoData.name != "102"  {
+                    print("INRANGE: Annotations in range : \(geoData.name) with distnace : \(distanceInMeters)")
                     let coordinates = CLLocationCoordinate2D(latitude: lat, longitude: long)
-                    let x = AnnotationsClass( coord: coordinates , id : geoData.name )
-                    var dublicated = false
-                    for annot in self.mapView.annotations {
-                        if annot.coordinate.latitude == coordinates.latitude &&  annot.coordinate.longitude == coordinates.longitude {
-                            dublicated = true
-                            break
-                        }
-                    }
-                    if dublicated {
-                        print("ya it does")
-                      
-                    }else {
+                    let x = AnnotationsClass( coord: coordinates , id : geoData.name , title : "\(distanceInMeters) meter" )
+//
                         self.serverData.append(geoData)
                         self.currentAnnotations.append(x)
                         self.mapView.addAnnotation(x)
-                    }
-
-                
                 }else {
-                    
-//                    let coordinates = CLLocationCoordinate2D(latitude: lat, longitude: long)
-
+                    print("OutRANGE: Annotations in range : \(geoData.name) with distnace : \(distanceInMeters)")
                     print("that is the annotation Number : \(self.mapView.annotations .count)")
-                    if let annotations =  self.mapView.annotations as? [AnnotationsClass] {
-                    for annot in annotations {
-                        print("that is really : \(annot.id!)  weird : \(geoData.name)")
-                         if let ant = annot.id , ant == geoData.name {
-                             self.mapView.removeAnnotation(annot)
-                            print("that is the annotation Number : \(self.mapView.annotations .count)")
-
-                            break
-                        }
-                    }
-                    }
-                 }
-//                self.mapView.addAnnotations(self.currentAnnotations)
-//                print("that is the count of annotations : \(self.currentAnnotations.count)")
+                }
             }
-         })
-        
+        self.isObserving = false
+        })
     }
-
-    
-    
-    /**
- before u add annoations u have to remove them 
-     
-     mapView.removeAnnotatio s(mapVieew,annotations)
- */
     
     //RideControlelr Protocol
     func acceptRide(lat: Double, long: Double) {
@@ -167,7 +152,7 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
     }
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-
+        
         if  mapViewIsZoomedIN {
             let y = GeoModel(name: "102", lat: self.mapView.centerCoordinate.latitude, long: self.mapView.centerCoordinate.longitude)
 //        print("Zoomed in regionDidChangeAnimated \(self.mapView.centerCoordinate) ")
@@ -181,7 +166,8 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
             return
             }
         }
- 
+        self.removeAllAnnotations()
+ self.observer()
 //        geoFire.setLocation(CLLocation(latitude: self.mapView.centerCoordinate.latitude, longitude: self.mapView.centerCoordinate.longitude), forKey: "firebase-hq") { (error) in
 //            if (error != nil) {
 //                print("An error occured: \(error)")
@@ -248,8 +234,9 @@ class MainPageVC: UIViewController , MKMapViewDelegate , CLLocationManagerDelega
 //        }else {
 //            print("Open Fav List")
 //        }
-        
-      self.removeAllAnnotations()
+        print("that is the annotation Number : \(self.mapView.annotations .count)")
+
+//      self.removeAllAnnotations()
     }
 
 }

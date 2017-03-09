@@ -13,9 +13,11 @@ class AnnotationsClass : NSObject, MKAnnotation {
     
     var coordinate: CLLocationCoordinate2D
     var id : String!
-    init(coord : CLLocationCoordinate2D,id : String ) {
+    var title: String?
+    init(coord : CLLocationCoordinate2D,id : String , title : String ) {
         self.coordinate = coord
-        self.id  = id 
+        self.id  = id
+        self.title = title 
     }
     
     
