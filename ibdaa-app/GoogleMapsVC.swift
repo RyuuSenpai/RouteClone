@@ -16,6 +16,7 @@ class GoogleMapsVC: UIViewController, CLLocationManagerDelegate , GMSMapViewDele
     @IBOutlet weak var googleMapsView: GMSMapView!
     @IBOutlet weak var mapViewThatContainThe2Buttons: UIView!
     
+    @IBOutlet weak var thePin: UIImageView!
     // VARIABLES
     var locationManager = CLLocationManager()
     
@@ -25,6 +26,8 @@ class GoogleMapsVC: UIViewController, CLLocationManagerDelegate , GMSMapViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.googleMapsView.isHidden = true
+        self.thePin.isHidden = true
+
         self.mapViewThatContainThe2Buttons.isHidden = true
         self.googleMapsView.alpha = 0
         self.mapViewThatContainThe2Buttons.alpha = 0
@@ -97,8 +100,12 @@ class GoogleMapsVC: UIViewController, CLLocationManagerDelegate , GMSMapViewDele
         
         let camera = GMSCameraPosition.camera(withLatitude: place.coordinate.latitude, longitude: place.coordinate.longitude, zoom: 15.0)
         self.googleMapsView.camera = camera
-        self.dismiss(animated: true, completion: nil) // dismiss after select place
-        
+        self.dismiss(animated: true){ (Void) in
+            
+            self.hideMapView()
+            
+            // dismiss after select place
+        }
     }
     
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
@@ -119,7 +126,6 @@ class GoogleMapsVC: UIViewController, CLLocationManagerDelegate , GMSMapViewDele
     
     @IBAction func openSearchAddress(_ sender: UIButton) {
         
-        self.heightttt.constant = 0
         let autoCompleteController = GMSAutocompleteViewController()
         autoCompleteController.delegate = self
         
@@ -134,7 +140,12 @@ class GoogleMapsVC: UIViewController, CLLocationManagerDelegate , GMSMapViewDele
     @IBAction func selectMapCenterCoordinate(_ sender: UIButton) {
         print("thta is the coordinates \(googleMapsView.camera.target)")
 //        print("thta is the coordinates \(googleMapsView.placeholderText.self    )")
-        cv()
+    
+        let location = CLLocation(latitude: googleMapsView.camera.target.latitude, longitude: googleMapsView.camera.target.longitude)
+
+        MapHelperFunctions.cv(location: location) { (locationName) in
+            print("yo yo yo yo yo yo that is my location name \(locationName) 090909")
+        }
         
         
 //        placesClient.currentPlace(callback: { (placeLikelihoodList, error) -> Void in
@@ -160,59 +171,23 @@ class GoogleMapsVC: UIViewController, CLLocationManagerDelegate , GMSMapViewDele
 
     
     @IBAction func manuallyPickupLocation(_ sender: UIButton) {
+   
+        
+        hideMapView()
+            }
+//Test 
+    func hideMapView() {
+        self.thePin.isHidden = false
         self.googleMapsView.isHidden = false
         self.mapViewThatContainThe2Buttons.isHidden = false
         UIView.animate(withDuration: 2.5, animations: {
             self.googleMapsView.alpha = 1.0
             UIView.animate(withDuration: 4.5, animations: {
-            self.mapViewThatContainThe2Buttons.alpha = 1.0
+                self.mapViewThatContainThe2Buttons.alpha = 1.0
             })
         })
         self.heightttt.constant = 0
 
-            }
-//Test 
-    func cv() {
-    let geoCoder = CLGeocoder()
-    let location = CLLocation(latitude: googleMapsView.camera.target.latitude, longitude: googleMapsView.camera.target.longitude)
-    var _locationName = ""
-    geoCoder.reverseGeocodeLocation(location, completionHandler: { placemarks, error in
-    guard let addressDict = placemarks?[0].addressDictionary else {
-    return
-    }
-    
-    // Print each key-value pair in a new row
-    addressDict.forEach { print($0) }
-    
-    // Print fully formatted address
-    if let formattedAddress = addressDict["FormattedAddressLines"] as? [String] {
-    print(formattedAddress.joined(separator: ", "))
-    }
-    
-    // Access each element manually
-    if let locationName = addressDict["Name"] as? String {
-    print(locationName)
-        _locationName = locationName
-    }
-    if let street = addressDict["Thoroughfare"] as? String {
-    print(street)
-    }
-    if let city = addressDict["City"] as? String {
-    print(city)
-    }
-    if let zip = addressDict["ZIP"] as? String {
-    print(zip)
-    }
-    if let country = addressDict["Country"] as? String {
-    print(country)
-    }
-        
-        DispatchQueue.main.async {
-            
-            print("that is the cityName  : \(_locationName)")
-        }
-    })
-    
     }
   
 }

@@ -38,6 +38,10 @@ class BookNowVC: UIViewController {
         estimatedMoney.addGestureRecognizer(tap2)
         promoCode.addGestureRecognizer(tap3)
         
+        if let destination = destinationName {
+            self.locationTitle.text = destination
+        }
+        
     }
     
     

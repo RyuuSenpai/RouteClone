@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52398D981E71898F00419AC8 /* North Direction_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = 52398D971E71898F00419AC8 /* North Direction_000000_25.png */; };
+		52398D9A1E718DE100419AC8 /* MapHelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52398D991E718DE100419AC8 /* MapHelperFunctions.swift */; };
 		527219881E6EE20A00540B51 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527219871E6EE20A00540B51 /* SWRevealViewController.m */; };
 		529DF9731E700E7D009BF3FB /* GeoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9721E700E7D009BF3FB /* GeoModel.swift */; };
-		529DF9861E702370009BF3FB /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DF97D1E702370009BF3FB /* GeoFire.m */; };
-		529DF9871E702370009BF3FB /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DF97F1E702370009BF3FB /* GFBase32Utils.m */; };
-		529DF9881E702370009BF3FB /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9811E702370009BF3FB /* GFGeoHash.m */; };
-		529DF9891E702370009BF3FB /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9831E702370009BF3FB /* GFGeoHashQuery.m */; };
-		529DF98A1E702370009BF3FB /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9851E702370009BF3FB /* GFQuery.m */; };
 		529DF98E1E703418009BF3FB /* AnnotationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DF98D1E703418009BF3FB /* AnnotationsClass.swift */; };
+		529DF9921E71555C009BF3FB /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9901E71555C009BF3FB /* SideMenuVC.swift */; };
+		529DF9931E71555C009BF3FB /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9911E71555C009BF3FB /* SideMenuCell.swift */; };
 		7108283B1E5EE41A001F3F16 /* ExteUiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7108283A1E5EE41A001F3F16 /* ExteUiLabel.swift */; };
 		7108283D1E5F1620001F3F16 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7108283C1E5F1620001F3F16 /* SignupVC.swift */; };
 		71085B661E5D006800DF3F51 /* arabFontnamed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71085B641E5D006800DF3F51 /* arabFontnamed.ttf */; };
@@ -55,26 +54,15 @@
 /* Begin PBXFileReference section */
 		0495B69A2A192371322B1A3A /* Pods-ibdaa-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ibdaa-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ibdaa-app/Pods-ibdaa-app.debug.xcconfig"; sourceTree = "<group>"; };
 		21E31FE749B7C49137D7FC4A /* Pods_ibdaa_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ibdaa_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52398D971E71898F00419AC8 /* North Direction_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "North Direction_000000_25.png"; sourceTree = "<group>"; };
+		52398D991E718DE100419AC8 /* MapHelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapHelperFunctions.swift; sourceTree = "<group>"; };
 		527219851E6EE20900540B51 /* ibdaa-app-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ibdaa-app-Bridging-Header.h"; sourceTree = "<group>"; };
 		527219861E6EE20A00540B51 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		527219871E6EE20A00540B51 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		529DF9721E700E7D009BF3FB /* GeoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoModel.swift; sourceTree = "<group>"; };
-		529DF9761E702370009BF3FB /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
-		529DF9771E702370009BF3FB /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
-		529DF9781E702370009BF3FB /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
-		529DF9791E702370009BF3FB /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
-		529DF97A1E702370009BF3FB /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
-		529DF97C1E702370009BF3FB /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
-		529DF97D1E702370009BF3FB /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
-		529DF97E1E702370009BF3FB /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
-		529DF97F1E702370009BF3FB /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
-		529DF9801E702370009BF3FB /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
-		529DF9811E702370009BF3FB /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
-		529DF9821E702370009BF3FB /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
-		529DF9831E702370009BF3FB /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
-		529DF9841E702370009BF3FB /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
-		529DF9851E702370009BF3FB /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		529DF98D1E703418009BF3FB /* AnnotationsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationsClass.swift; sourceTree = "<group>"; };
+		529DF9901E71555C009BF3FB /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		529DF9911E71555C009BF3FB /* SideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		7108283A1E5EE41A001F3F16 /* ExteUiLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExteUiLabel.swift; sourceTree = "<group>"; };
 		7108283C1E5F1620001F3F16 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		71085B641E5D006800DF3F51 /* arabFontnamed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arabFontnamed.ttf; sourceTree = "<group>"; };
@@ -150,42 +138,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		529DF9741E702370009BF3FB /* GeoFire */ = {
+		529DF98F1E71554D009BF3FB /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				529DF9751E702370009BF3FB /* API */,
-				529DF97A1E702370009BF3FB /* GeoFire-Prefix.pch */,
-				529DF97B1E702370009BF3FB /* Implementation */,
+				529DF9901E71555C009BF3FB /* SideMenuVC.swift */,
+				529DF9911E71555C009BF3FB /* SideMenuCell.swift */,
 			);
-			path = GeoFire;
-			sourceTree = "<group>";
-		};
-		529DF9751E702370009BF3FB /* API */ = {
-			isa = PBXGroup;
-			children = (
-				529DF9761E702370009BF3FB /* GeoFire.h */,
-				529DF9771E702370009BF3FB /* GFCircleQuery.h */,
-				529DF9781E702370009BF3FB /* GFQuery.h */,
-				529DF9791E702370009BF3FB /* GFRegionQuery.h */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		529DF97B1E702370009BF3FB /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				529DF97C1E702370009BF3FB /* GeoFire+Private.h */,
-				529DF97D1E702370009BF3FB /* GeoFire.m */,
-				529DF97E1E702370009BF3FB /* GFBase32Utils.h */,
-				529DF97F1E702370009BF3FB /* GFBase32Utils.m */,
-				529DF9801E702370009BF3FB /* GFGeoHash.h */,
-				529DF9811E702370009BF3FB /* GFGeoHash.m */,
-				529DF9821E702370009BF3FB /* GFGeoHashQuery.h */,
-				529DF9831E702370009BF3FB /* GFGeoHashQuery.m */,
-				529DF9841E702370009BF3FB /* GFQuery+Private.h */,
-				529DF9851E702370009BF3FB /* GFQuery.m */,
-			);
-			path = Implementation;
+			name = SideMenu;
 			sourceTree = "<group>";
 		};
 		711E12541E5CDAD300FA2E7B /* Localization */ = {
@@ -208,6 +167,7 @@
 				71FACFE01E6369B200C8679C /* Protocols.swift */,
 				712220781E6D6BE000A0C784 /* GetLocationTitle.swift */,
 				529DF9721E700E7D009BF3FB /* GeoModel.swift */,
+				52398D991E718DE100419AC8 /* MapHelperFunctions.swift */,
 			);
 			name = M;
 			sourceTree = "<group>";
@@ -228,6 +188,9 @@
 				713DF3561E5DD9CE0052E918 /* SigninVC.swift */,
 				71141C3C1E5CEA9C00EA9D44 /* IntroMainVC.swift */,
 				7163CF621E6858F70014D8BE /* BookNowVC.swift */,
+				7122207A1E6EA5E700A0C784 /* GetTheClosetDriverViewController.swift */,
+				7150AC701E6C1C5900FB1445 /* GoogleMapsVC.swift */,
+				529DF98F1E71554D009BF3FB /* SideMenu */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -235,7 +198,7 @@
 		713DF3601E5DDEA60052E918 /* 3rd Pt Lib */ = {
 			isa = PBXGroup;
 			children = (
-				529DF9741E702370009BF3FB /* GeoFire */,
+				52398D971E71898F00419AC8 /* North Direction_000000_25.png */,
 				527219861E6EE20A00540B51 /* SWRevealViewController.h */,
 				527219871E6EE20A00540B51 /* SWRevealViewController.m */,
 				711E12541E5CDAD300FA2E7B /* Localization */,
@@ -276,9 +239,7 @@
 				7129BFD51E62D4EF00643173 /* C */,
 				7129BFD41E62D4E100643173 /* V */,
 				7129BFCF1E62D06A00643173 /* RideHandler.swift */,
-				7150AC701E6C1C5900FB1445 /* GoogleMapsVC.swift */,
 				71C835571E5A35DC00FF9A53 /* Main.storyboard */,
-				7122207A1E6EA5E700A0C784 /* GetTheClosetDriverViewController.swift */,
 				7122207C1E6EB10600A0C784 /* CancelRideReasons.swift */,
 				717495411E60C3030097983B /* ChatVC.swift */,
 				71C8355A1E5A35DC00FF9A53 /* Assets.xcassets */,
@@ -367,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71C8355E1E5A35DC00FF9A53 /* LaunchScreen.storyboard in Resources */,
+				52398D981E71898F00419AC8 /* North Direction_000000_25.png in Resources */,
 				71085B671E5D006800DF3F51 /* FranceAndEnglish.otf in Resources */,
 				71C8355B1E5A35DC00FF9A53 /* Assets.xcassets in Resources */,
 				71BE9C311E638C5400B31E11 /* ibdaa.plist in Resources */,
@@ -453,11 +415,11 @@
 				713DF35E1E5DDE9F0052E918 /* FloatLabelTextField.swift in Sources */,
 				711E125B1E5CDD4100FA2E7B /* MirroringLabel.swift in Sources */,
 				71C835541E5A35DC00FF9A53 /* AppDelegate.swift in Sources */,
+				529DF9921E71555C009BF3FB /* SideMenuVC.swift in Sources */,
+				52398D9A1E718DE100419AC8 /* MapHelperFunctions.swift in Sources */,
 				7163CF631E6858F70014D8BE /* BookNowVC.swift in Sources */,
 				71141C3D1E5CEA9C00EA9D44 /* IntroMainVC.swift in Sources */,
 				712220791E6D6BE000A0C784 /* GetLocationTitle.swift in Sources */,
-				529DF9881E702370009BF3FB /* GFGeoHash.m in Sources */,
-				529DF9891E702370009BF3FB /* GFGeoHashQuery.m in Sources */,
 				717495421E60C3030097983B /* ChatVC.swift in Sources */,
 				71FACFE11E6369B200C8679C /* Protocols.swift in Sources */,
 				711C3E7D1E5C843000CBC5F1 /* MainPageVC.swift in Sources */,
@@ -466,7 +428,7 @@
 				7122207B1E6EA5E700A0C784 /* GetTheClosetDriverViewController.swift in Sources */,
 				7122207D1E6EB10600A0C784 /* CancelRideReasons.swift in Sources */,
 				529DF98E1E703418009BF3FB /* AnnotationsClass.swift in Sources */,
-				529DF98A1E702370009BF3FB /* GFQuery.m in Sources */,
+				529DF9931E71555C009BF3FB /* SideMenuCell.swift in Sources */,
 				71FACFDF1E63603100C8679C /* DBProvider.swift in Sources */,
 				71C835661E5A36B700FF9A53 /* LaunchScreenVC.swift in Sources */,
 				529DF9731E700E7D009BF3FB /* GeoModel.swift in Sources */,
@@ -474,9 +436,7 @@
 				71141C3F1E5CF5EF00EA9D44 /* MaterialView.swift in Sources */,
 				711E125A1E5CDD4100FA2E7B /* L102Language.swift in Sources */,
 				713DF3511E5DC5F50052E918 /* NoteBook.swift in Sources */,
-				529DF9871E702370009BF3FB /* GFBase32Utils.m in Sources */,
 				713DF3571E5DD9CE0052E918 /* SigninVC.swift in Sources */,
-				529DF9861E702370009BF3FB /* GeoFire.m in Sources */,
 				711E12591E5CDD4100FA2E7B /* L012Localizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -612,7 +572,7 @@
 				INFOPLIST_FILE = "ibdaa-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibdaa.zeowls;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeowls.ibdaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ibdaa-app/ibdaa-app-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -630,7 +590,7 @@
 				INFOPLIST_FILE = "ibdaa-app/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibdaa.zeowls;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zeowls.ibdaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ibdaa-app/ibdaa-app-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

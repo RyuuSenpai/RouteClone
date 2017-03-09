@@ -19,4 +19,5 @@ pod 'Firebase/Database'
 pod 'Firebase/Core'
 pod 'GoogleMaps', '~> 2.2'
  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
  end
