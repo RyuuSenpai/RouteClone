@@ -29,14 +29,14 @@ class CancelRideReasons: UIViewController {
         print("that is the sender Tag : \(sender.tag)")
      
         for x in checkBoxBtnsOL {
-            x.setImage(UIImage(named:"unChecked"), for: UIControlState.normal)
+            x.setImage(UIImage(named:"WunChecked"), for: UIControlState.normal)
             x.isSelected = false
         }
    
         sender.isSelected = !sender.isSelected
         
         if sender.isSelected {
-            sender.setImage(UIImage(named:"checked"), for: UIControlState.normal)
+            sender.setImage(UIImage(named:"Wchecked"), for: UIControlState.normal)
             self.reasonForCancelation = sender.tag
         }
     }

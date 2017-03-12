@@ -28,7 +28,7 @@ class LaunchScreenVC: UIViewController {
     }
     func animated() {
         self.arrowImageView.frame = CGRect(x: self.arrowImageView.frame.origin.x + x, y: self.arrowImageView.frame.origin.y, width: self.arrowImageView.frame.size.width, height: self.arrowImageView.frame.size.height)
-        x += 0.2
+        x -= 0.2
     }
     func showNavController() {
         performSegue(withIdentifier: "launchScreen", sender: self)

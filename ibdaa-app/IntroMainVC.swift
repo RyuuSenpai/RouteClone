@@ -32,7 +32,7 @@ class IntroMainVC: UIViewController {
 
     func movingArrow() {
         
-        for x in 2...29 {
+        for x in 2...28 {
             let image = UIImage(named:"\(x)")
             self.arrowArray.append(image!)
         }

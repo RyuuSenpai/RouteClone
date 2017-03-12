@@ -20,4 +20,8 @@ pod 'Firebase/Core'
 pod 'GoogleMaps', '~> 2.2'
  pod 'GooglePlaces'
   pod 'GooglePlacePicker'
+pod 'SinchVerification-Swift'
+
+
+
  end

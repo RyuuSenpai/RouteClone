@@ -58,6 +58,7 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.8)
   - IQKeyboardManagerSwift (4.0.6)
+  - SinchVerification-Swift (2.0.3)
   - TwitterCore (2.8.0):
     - Fabric
   - TwitterKit (2.8.1):
@@ -76,6 +77,7 @@ DEPENDENCIES:
   - GooglePlacePicker
   - GooglePlaces
   - IQKeyboardManagerSwift (= 4.0.6)
+  - SinchVerification-Swift
   - TwitterKit
 
 SPEC CHECKSUMS:
@@ -96,9 +98,10 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   IQKeyboardManagerSwift: b3015e819559ca76381f87a0833f44d178564603
+  SinchVerification-Swift: 567aaf9cb29c55a115faecb6016fea25a7f37688
   TwitterCore: e959987be23c767004d29eb7fab8d85d8585a2e5
   TwitterKit: 3b6044a7320340326a4098f3e37aa1dbaeb94942
 
-PODFILE CHECKSUM: d5a2e5d018fba39de3025fcf47a67259163ca3d1
+PODFILE CHECKSUM: 204d28d483cf1c5583e1c969ed1c6b3f82d031ac
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.0.1

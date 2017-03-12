@@ -11,9 +11,21 @@ import UIKit
 class GetTheClosetDriverViewController: UIViewController {
     @IBOutlet weak var cancelRideView: UIView!
 
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2
+        self.profileImage.layer.borderWidth = 1.5
+        self.profileImage.layer.borderColor = UIColor.black.cgColor
+        self.profileImage.layer.shadowColor = UIColor.black.cgColor
+        let x = self.profileImage.layer
+        x.shadowOffset = CGSize(width: 2, height: 2)
+        x.shadowRadius = 5
+        x.shadowOpacity = 0.5
+        self.profileImage.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
 

@@ -19,7 +19,9 @@ class GoogleMapsVC: UIViewController, CLLocationManagerDelegate , GMSMapViewDele
     @IBOutlet weak var thePin: UIImageView!
     // VARIABLES
     var locationManager = CLLocationManager()
-    
+    var userLocation : String?
+    var startCoordinates : CLLocationCoordinate2D?
+
     // test
     var placesClient: GMSPlacesClient!
     //
@@ -44,7 +46,7 @@ class GoogleMapsVC: UIViewController, CLLocationManagerDelegate , GMSMapViewDele
     
     func initGoogleMaps() {
         
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 30.033824, longitude: 31.24007, zoom: 6.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         self.googleMapsView.camera = camera
@@ -140,11 +142,12 @@ class GoogleMapsVC: UIViewController, CLLocationManagerDelegate , GMSMapViewDele
     @IBAction func selectMapCenterCoordinate(_ sender: UIButton) {
         print("thta is the coordinates \(googleMapsView.camera.target)")
 //        print("thta is the coordinates \(googleMapsView.placeholderText.self    )")
-    
+    SwiftSpinner.show("Conneecting to satallite...")
         let location = CLLocation(latitude: googleMapsView.camera.target.latitude, longitude: googleMapsView.camera.target.longitude)
-
+//selectedDestinationSegue
         MapHelperFunctions.cv(location: location) { (locationName) in
             print("yo yo yo yo yo yo that is my location name \(locationName) 090909")
+            self.performSegue(withIdentifier: "selectedDestinationSegue", sender: locationName)
         }
         
         
@@ -169,6 +172,17 @@ class GoogleMapsVC: UIViewController, CLLocationManagerDelegate , GMSMapViewDele
 
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        SwiftSpinner.hide() 
+        if segue.identifier == "selectedDestinationSegue" {
+            let destination = segue.destination as! BookNowVC
+            destination.destinationName = sender as? String
+            destination.locationName = self.userLocation
+            destination.destinationCoordinates = CLLocationCoordinate2D(latitude: googleMapsView.camera.target.latitude, longitude: googleMapsView.camera.target.longitude)
+            destination.startCoordinates = startCoordinates
+
+         }
+    }
     
     @IBAction func manuallyPickupLocation(_ sender: UIButton) {
    

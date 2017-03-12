@@ -14,6 +14,7 @@
 		529DF98E1E703418009BF3FB /* AnnotationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DF98D1E703418009BF3FB /* AnnotationsClass.swift */; };
 		529DF9921E71555C009BF3FB /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9901E71555C009BF3FB /* SideMenuVC.swift */; };
 		529DF9931E71555C009BF3FB /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529DF9911E71555C009BF3FB /* SideMenuCell.swift */; };
+		7103CC101E71E1CF00EEDC53 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7103CC0D1E71E1CF00EEDC53 /* SwiftSpinner.swift */; };
 		7108283B1E5EE41A001F3F16 /* ExteUiLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7108283A1E5EE41A001F3F16 /* ExteUiLabel.swift */; };
 		7108283D1E5F1620001F3F16 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7108283C1E5F1620001F3F16 /* SignupVC.swift */; };
 		71085B661E5D006800DF3F51 /* arabFontnamed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71085B641E5D006800DF3F51 /* arabFontnamed.ttf */; };
@@ -30,6 +31,12 @@
 		7122207D1E6EB10600A0C784 /* CancelRideReasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122207C1E6EB10600A0C784 /* CancelRideReasons.swift */; };
 		7129BFD01E62D06A00643173 /* RideHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129BFCF1E62D06A00643173 /* RideHandler.swift */; };
 		7129BFD21E62D2D800643173 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7129BFD11E62D2D800643173 /* Constants.swift */; };
+		713AE85E1E738914000286AE /* CheckPhoneNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713AE85D1E738914000286AE /* CheckPhoneNumViewController.swift */; };
+		713AE8671E741B21000286AE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713AE8661E741B21000286AE /* CoreTelephony.framework */; };
+		713AE8691E741B2F000286AE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713AE8681E741B2F000286AE /* SystemConfiguration.framework */; };
+		713AE86B1E741B4A000286AE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 713AE86A1E741B4A000286AE /* libc++.tbd */; };
+		713AE86D1E741B5D000286AE /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 713AE86C1E741B5D000286AE /* libicucore.tbd */; };
+		713AE86F1E7420E6000286AE /* WaitingPhoneConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713AE86E1E7420E6000286AE /* WaitingPhoneConfirmationViewController.swift */; };
 		713DF3511E5DC5F50052E918 /* NoteBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713DF3501E5DC5F50052E918 /* NoteBook.swift */; };
 		713DF3571E5DD9CE0052E918 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713DF3561E5DD9CE0052E918 /* SigninVC.swift */; };
 		713DF35E1E5DDE9F0052E918 /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713DF35C1E5DDE9F0052E918 /* FloatLabelTextField.swift */; };
@@ -51,6 +58,19 @@
 		BECBB0A4F2D275FCECC62DFC /* Pods_ibdaa_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21E31FE749B7C49137D7FC4A /* Pods_ibdaa_app.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		713AE8651E7419FB000286AE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0495B69A2A192371322B1A3A /* Pods-ibdaa-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ibdaa-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ibdaa-app/Pods-ibdaa-app.debug.xcconfig"; sourceTree = "<group>"; };
 		21E31FE749B7C49137D7FC4A /* Pods_ibdaa_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ibdaa_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +83,8 @@
 		529DF98D1E703418009BF3FB /* AnnotationsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationsClass.swift; sourceTree = "<group>"; };
 		529DF9901E71555C009BF3FB /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		529DF9911E71555C009BF3FB /* SideMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
+		7103CC0C1E71E1CF00EEDC53 /* SwiftSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftSpinner.h; sourceTree = "<group>"; };
+		7103CC0D1E71E1CF00EEDC53 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		7108283A1E5EE41A001F3F16 /* ExteUiLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExteUiLabel.swift; sourceTree = "<group>"; };
 		7108283C1E5F1620001F3F16 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		71085B641E5D006800DF3F51 /* arabFontnamed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arabFontnamed.ttf; sourceTree = "<group>"; };
@@ -81,6 +103,12 @@
 		7122207C1E6EB10600A0C784 /* CancelRideReasons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelRideReasons.swift; sourceTree = "<group>"; };
 		7129BFCF1E62D06A00643173 /* RideHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideHandler.swift; sourceTree = "<group>"; };
 		7129BFD11E62D2D800643173 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		713AE85D1E738914000286AE /* CheckPhoneNumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPhoneNumViewController.swift; sourceTree = "<group>"; };
+		713AE8661E741B21000286AE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		713AE8681E741B2F000286AE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		713AE86A1E741B4A000286AE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		713AE86C1E741B5D000286AE /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		713AE86E1E7420E6000286AE /* WaitingPhoneConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingPhoneConfirmationViewController.swift; sourceTree = "<group>"; };
 		713DF3501E5DC5F50052E918 /* NoteBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteBook.swift; sourceTree = "<group>"; };
 		713DF3561E5DD9CE0052E918 /* SigninVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninVC.swift; sourceTree = "<group>"; };
 		713DF35C1E5DDE9F0052E918 /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
@@ -112,6 +140,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713AE86D1E741B5D000286AE /* libicucore.tbd in Frameworks */,
+				713AE86B1E741B4A000286AE /* libc++.tbd in Frameworks */,
+				713AE8691E741B2F000286AE /* SystemConfiguration.framework in Frameworks */,
+				713AE8671E741B21000286AE /* CoreTelephony.framework in Frameworks */,
 				7150AC731E6C5E4800FB1445 /* CoreLocation.framework in Frameworks */,
 				BECBB0A4F2D275FCECC62DFC /* Pods_ibdaa_app.framework in Frameworks */,
 			);
@@ -123,6 +155,10 @@
 		0AD6824923D4A58A77E327A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				713AE86C1E741B5D000286AE /* libicucore.tbd */,
+				713AE86A1E741B4A000286AE /* libc++.tbd */,
+				713AE8681E741B2F000286AE /* SystemConfiguration.framework */,
+				713AE8661E741B21000286AE /* CoreTelephony.framework */,
 				7150AC721E6C5E4800FB1445 /* CoreLocation.framework */,
 				21E31FE749B7C49137D7FC4A /* Pods_ibdaa_app.framework */,
 			);
@@ -145,6 +181,15 @@
 				529DF9911E71555C009BF3FB /* SideMenuCell.swift */,
 			);
 			name = SideMenu;
+			sourceTree = "<group>";
+		};
+		7103CC091E71E1CF00EEDC53 /* SwiftSpinner */ = {
+			isa = PBXGroup;
+			children = (
+				7103CC0C1E71E1CF00EEDC53 /* SwiftSpinner.h */,
+				7103CC0D1E71E1CF00EEDC53 /* SwiftSpinner.swift */,
+			);
+			path = SwiftSpinner;
 			sourceTree = "<group>";
 		};
 		711E12541E5CDAD300FA2E7B /* Localization */ = {
@@ -189,6 +234,8 @@
 				71141C3C1E5CEA9C00EA9D44 /* IntroMainVC.swift */,
 				7163CF621E6858F70014D8BE /* BookNowVC.swift */,
 				7122207A1E6EA5E700A0C784 /* GetTheClosetDriverViewController.swift */,
+				713AE85D1E738914000286AE /* CheckPhoneNumViewController.swift */,
+				713AE86E1E7420E6000286AE /* WaitingPhoneConfirmationViewController.swift */,
 				7150AC701E6C1C5900FB1445 /* GoogleMapsVC.swift */,
 				529DF98F1E71554D009BF3FB /* SideMenu */,
 			);
@@ -198,6 +245,7 @@
 		713DF3601E5DDEA60052E918 /* 3rd Pt Lib */ = {
 			isa = PBXGroup;
 			children = (
+				7103CC091E71E1CF00EEDC53 /* SwiftSpinner */,
 				52398D971E71898F00419AC8 /* North Direction_000000_25.png */,
 				527219861E6EE20A00540B51 /* SWRevealViewController.h */,
 				527219871E6EE20A00540B51 /* SWRevealViewController.m */,
@@ -269,6 +317,7 @@
 				2E914B6EF8B2A11899EE5630 /* [CP] Embed Pods Frameworks */,
 				FEDB4BF4E2E4519EB659E5BB /* [CP] Copy Pods Resources */,
 				713DF34F1E5DBF660052E918 /* ShellScript */,
+				713AE8651E7419FB000286AE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,7 +341,7 @@
 					71C8354F1E5A35DC00FF9A53 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = ZMU9J2W23C;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -381,7 +430,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FEDB4BF4E2E4519EB659E5BB /* [CP] Copy Pods Resources */ = {
@@ -423,6 +472,8 @@
 				717495421E60C3030097983B /* ChatVC.swift in Sources */,
 				71FACFE11E6369B200C8679C /* Protocols.swift in Sources */,
 				711C3E7D1E5C843000CBC5F1 /* MainPageVC.swift in Sources */,
+				713AE85E1E738914000286AE /* CheckPhoneNumViewController.swift in Sources */,
+				7103CC101E71E1CF00EEDC53 /* SwiftSpinner.swift in Sources */,
 				7108283D1E5F1620001F3F16 /* SignupVC.swift in Sources */,
 				713DF35F1E5DDE9F0052E918 /* FloatLabelTextView.swift in Sources */,
 				7122207B1E6EA5E700A0C784 /* GetTheClosetDriverViewController.swift in Sources */,
@@ -435,6 +486,7 @@
 				7129BFD01E62D06A00643173 /* RideHandler.swift in Sources */,
 				71141C3F1E5CF5EF00EA9D44 /* MaterialView.swift in Sources */,
 				711E125A1E5CDD4100FA2E7B /* L102Language.swift in Sources */,
+				713AE86F1E7420E6000286AE /* WaitingPhoneConfirmationViewController.swift in Sources */,
 				713DF3511E5DC5F50052E918 /* NoteBook.swift in Sources */,
 				713DF3571E5DD9CE0052E918 /* SigninVC.swift in Sources */,
 				711E12591E5CDD4100FA2E7B /* L012Localizer.swift in Sources */,

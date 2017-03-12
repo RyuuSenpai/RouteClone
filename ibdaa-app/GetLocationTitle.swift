@@ -55,4 +55,23 @@ class GetLocationTitle  {
         })
        return _locationName
     }
+    
+    
+    
+    func animateImage(image: UIImageView , imageArray : [UIImage] , duration: Double) {
+        
+        image.animationImages = imageArray
+        image.animationRepeatCount = 0
+        image.animationDuration = duration
+        image.startAnimating()
+        print("sd");
+    }
+    
+    func stopPinAnimation(image: UIImageView) {
+        
+        image.stopAnimating()
+    }
+
+    
+    
 }

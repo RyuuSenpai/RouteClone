@@ -32,6 +32,7 @@ class MainPageVC: UIViewController , SWRevealViewControllerDelegate , MKMapViewD
 //    var geoFire : GeoFire!
     override func viewDidLoad() {
         super.viewDidLoad()
+        SwiftSpinner.show("Conneecting to satallite...")
         mapView.delegate = self
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -117,7 +118,7 @@ class MainPageVC: UIViewController , SWRevealViewControllerDelegate , MKMapViewD
 //        self.mapViewIsZoomedIN = false
 //        delay(delay: 2.0){
 //            self.mapViewIsZoomedIN = true
-            self.animateImage()
+        GetLocationTitle.getLocation.animateImage(image: self.pinImageView ,imageArray : [ UIImage(named:"Load4")!,UIImage(named:"Load3")!,UIImage(named:"Load2")!,UIImage(named:"Load1")!] , duration : 0.85)
 //            self.removeAllAnnotations()
             self.ref?.child("Requests").child("102").setValue(self.dict(data: y))
 //            return
@@ -171,18 +172,6 @@ class MainPageVC: UIViewController , SWRevealViewControllerDelegate , MKMapViewD
         
     }
     
-    func animateImage() {
-        self.pinImageView.animationImages = [ #imageLiteral(resourceName: "pin-1"),#imageLiteral(resourceName: "pin-2"),#imageLiteral(resourceName: "pin-3"),#imageLiteral(resourceName: "pin-4")]
-        pinImageView.animationRepeatCount = 0
-        pinImageView.animationDuration = 0.85
-        pinImageView.startAnimating()
-            print("sd");
-    }
-    
-    func stopPinAnimation() {
-    
-        pinImageView.stopAnimating()
-    }
 
     func delay(delay:Double, closure:@escaping ()->()) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
@@ -203,15 +192,24 @@ class MainPageVC: UIViewController , SWRevealViewControllerDelegate , MKMapViewD
     
     @IBAction func bookTripBtnAct(_ sender: UIButton) {
 //        print("that is the server data : 2 \(self.serverData)")
-//        if sender.tag == 0 {
-//            print("Book now")
-//        }else if sender.tag == 1{
-//            print("Book Later")
-//        }else {
-//            print("Open Fav List")
-//        }
+        if sender.tag == 0 {
+            print("Book now")
+            SwiftSpinner.show("Loading...")
+            guard let userlocation = self.userPickedLocation else { return }
+            MapHelperFunctions.cv(location: CLLocation(latitude:userlocation.latitude,longitude:userlocation.longitude) ) {
+                (userlOcation) in
+                self.performSegue(withIdentifier: "BookNowSegue", sender: userlOcation)
+                SwiftSpinner.hide()
+            }
+        }else if sender.tag == 1{
+            print("Book Later")
+        }else {
+            print("Open Fav List")
+        }
         print("that is the annotation Number : \(self.mapView.annotations .count)")
-        self.performSegue(withIdentifier: "BookNowSegue", sender: self)
+        
+
+        
 
 //      self.removeAllAnnotations()
     }
@@ -224,7 +222,8 @@ class MainPageVC: UIViewController , SWRevealViewControllerDelegate , MKMapViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "BookNowSegue" {
             let vc = segue.destination as! BookNowVC
-            vc.destinationName = "\(self.userPickedLocation)"
+            vc.locationName = sender as? String
+            vc.startCoordinates = CLLocationCoordinate2D(latitude: (self.userPickedLocation?.latitude)! , longitude: (self.userPickedLocation?.longitude)! )  
         }
     }
     
@@ -291,8 +290,10 @@ extension MainPageVC {
                     print("that is the annotation Number : \(self.mapView.annotations .count)")
                 }
             }
+            SwiftSpinner.hide()
             self.isObserving = false
-            self.stopPinAnimation()
+            GetLocationTitle.getLocation
+//                .stopPinAnimation(image:self.pinImageView)
         })
     }
     

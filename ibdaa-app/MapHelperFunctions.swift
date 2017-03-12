@@ -23,6 +23,7 @@ class MapHelperFunctions : NSObject  {
    static  func cv(location : CLLocation,completed : @escaping (String)->()) {
         let geoCoder = CLGeocoder()
         var _locationName = ""
+    var _city = ""
         geoCoder.reverseGeocodeLocation(location, completionHandler: { placemarks, error in
             guard let addressDict = placemarks?[0].addressDictionary else {
                 return
@@ -46,6 +47,7 @@ class MapHelperFunctions : NSObject  {
             }
             if let city = addressDict["City"] as? String {
                 print(city)
+                _city = city
             }
             if let zip = addressDict["ZIP"] as? String {
                 print(zip)
@@ -55,7 +57,7 @@ class MapHelperFunctions : NSObject  {
             }
             
             DispatchQueue.main.async {
-                completed(_locationName)
+                completed(_locationName + " , " + _city)
                 print("that is the cityName  : \(_locationName)")
             }
         })
